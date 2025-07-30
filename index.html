@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Interest Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .options {
+      margin-left: 20px;
+    }
+    label {
+      margin-right: 15px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Employee Interest Survey</h1>
+  <p>Instructions: For each statement below, select how much it applies to you: <strong>'A Lot'</strong>, <strong>'A Little'</strong>, or <strong>'Never'</strong>. This survey will help identify cross-training opportunities and inform possible new roles aligned with your interests.</p>
+
+  <form>
+    <!-- Begin questions -->
+    <div class="questions">
+      <!-- JavaScript can be used to generate these dynamically, but here they are manually written -->
+      <!-- You can replace the questions in this list or edit as needed -->
+      <!-- START -->
+      <script>
+        const questions = [
+          "I like to paint or draw.",
+          "I enjoy working on my car or mechanical devices.",
+          "I enjoy learning about new topics or subject matter.",
+          "I like helping others solve problems.",
+          "I enjoy writing (stories, blogs, journaling).",
+          "I like organizing events or activities.",
+          "I enjoy leading a team or project.",
+          "I like working with numbers and data.",
+          "I enjoy teaching or training others.",
+          "I like creating digital content (videos, graphics).",
+          "I enjoy public speaking or giving presentations.",
+          "I like working with technology or troubleshooting tech issues.",
+          "I enjoy outdoor activities and nature.",
+          "I like doing crafts or DIY projects.",
+          "I enjoy researching and finding information.",
+          "I like planning and scheduling tasks.",
+          "I enjoy customer interaction and providing support.",
+          "I like social media and digital marketing.",
+          "I enjoy photography or videography.",
+          "I like solving puzzles or brain teasers.",
+          "I enjoy mentoring or coaching others.",
+          "I like handling logistics or managing operations.",
+          "I enjoy reading books or articles in my free time.",
+          "I like building or assembling things.",
+          "I enjoy learning new software tools.",
+          "I like experimenting with new ideas or innovations.",
+          "I enjoy analyzing situations or data trends.",
+          "I like creating art or design-based projects.",
+          "I enjoy participating in team-based activities.",
+          "I like managing finances or budgeting.",
+          "I enjoy improving processes or systems.",
+          "I like talking to people and making new connections.",
+          "I enjoy handling customer feedback or complaints.",
+          "I like editing or proofreading written content.",
+          "I enjoy being a subject matter expert.",
+          "I like staying up-to-date with industry trends.",
+          "I enjoy training new employees.",
+          "I like using tools or equipment to fix things.",
+          "I enjoy testing and quality control tasks.",
+          "I like maintaining documentation or records.",
+          "I enjoy giving advice or support to peers.",
+          "I like evaluating performance or results.",
+          "I enjoy working with spreadsheets or databases.",
+          "I like contributing to team strategy or planning.",
+          "I enjoy interacting with customers face-to-face.",
+          "I like finding efficiencies or time-saving solutions.",
+          "I enjoy setting and tracking goals.",
+          "I like learning languages or cultural topics.",
+          "I enjoy cross-functional collaboration.",
+          "I like building new procedures or workflows."
+        ];
+
+        questions.forEach((text, index) => {
+          const qNum = index + 1;
+          document.write(`
+            <div class="question">
+              <label>${qNum}. ${text}</label>
+              <div class="options">
+                <label><input type="radio" name="q${qNum}" value="2"> A Lot</label>
+                <label><input type="radio" name="q${qNum}" value="1"> A Little</label>
+                <label><input type="radio" name="q${qNum}" value="0"> Never</label>
+              </div>
+            </div>
+          `);
+        });
+      </script>
+      <!-- END -->
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
